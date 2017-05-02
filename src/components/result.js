@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Panel, ListGroup, ListGroupItem } from 'react-bootstrap';
+import { ListGroup, ListGroupItem } from 'react-bootstrap';
 
 import Results from '../classes/results';
 import Prompts from '../classes/prompts';

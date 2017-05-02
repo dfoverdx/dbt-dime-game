@@ -82,6 +82,20 @@ class App extends Component {
                 break;
         }
 
+        let links = [(
+                <li key='link1'>
+                    <a className='navbar-link' href="https://borderlinebabble.com/2015/12/08/dbt-skills-group-interpersonal-effectiveness-weeks-5-6/">
+                        Dime Game Worksheet
+                    </a>
+                </li>
+            ),(
+                <li key='link2'>
+                    <a className='navbar-link' href="https://www.amazon.com/Skills-Training-Handouts-Worksheets-Second/dp/1572307811/ref=sr_1_2?ie=UTF8&qid=1493762186&sr=8-2&keywords=dbt+workbook">
+                        DBT® Skills Training Handouts and Worksheets, Second Edition
+                    </a>
+                </li>
+            )];
+
         return (
             <div className='App'>
                 <DocumentMeta {...meta} />
@@ -91,26 +105,25 @@ class App extends Component {
                         {jumboDesc}
                     </Grid>
                 </Jumbotron>
-                <Grid bsStyle='container' style={{marginBottom: 60}}>
+                <Grid bsStyle='container' className='app-container'>
                     {q}
                 </Grid>
                 <Navbar fixedBottom className='hidden-xs'>
                     <div className='navbar-text' style={{marginLeft: 0}}>
-                        <ul className='list-inline'>
-                            <li>
-                                <a className='navbar-link' href="https://borderlinebabble.com/2015/12/08/dbt-skills-group-interpersonal-effectiveness-weeks-5-6/">
-                                    Dime Game Worksheet
-                                </a>
-                            </li>
-                            <li>
-                                <a className='navbar-link' href="https://www.amazon.com/Skills-Training-Handouts-Worksheets-Second/dp/1572307811/ref=sr_1_2?ie=UTF8&qid=1493762186&sr=8-2&keywords=dbt+workbook">
-                                    DBT® Skills Training Handouts and Worksheets, Second Edition
-                                </a>
-                            </li>
+                        <ul className='list-inline hidden-sm'>
+                            {links}
+                        </ul>
+                        <ul className='list-unstyled visible-sm'>
+                            {links}
                         </ul>
                     </div>
                     <div className='navbar-right navbar-text' style={{marginRight: 0, marginLeft: 0}}>
-                        <a href='/'>Jordan Hitch</a> © 2017
+                        <ul className='list-inline'>
+                            <li>
+                                <a className='navbar-link' href="https://github.com/dfoverdx/dbt-dime-game">Source Code</a>
+                            </li>
+                            <li><a href='/'>Jordan Hitch</a> © 2017</li>
+                        </ul>
                     </div>
                 </Navbar>
             </div>
