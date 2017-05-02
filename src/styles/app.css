@@ -1,0 +1,31 @@
+.app-btn {
+    height: 150px;
+    margin-right: 20px;
+    max-width: 340px;
+    min-width: 340px;
+    width: 340px;
+    margin-top: 12px;
+}
+
+.app-btn > .decision-type-text {
+    font-size: 30px;
+    white-space: normal;
+}
+
+.app-btn > .prompt-text {
+    font-size: 50px;
+}
+
+.navbar-text .list-inline {
+    display: block;
+}
+
+.navbar-text .list-inline li {
+    display: inline-block;
+    padding: 0;
+}
+
+.navbar-text .list-inline li:not(:last-of-type):after {
+    content: '|';
+    margin: 0 5px;
+}

@@ -5,10 +5,14 @@
   "private": true,
   "description": "Simple web app for the DBT \"Dime Game\" used to determine how strongly you should push when making a request or giving a \"no\" answer in an interaction",
   "devDependencies": {
+    "gh-pages": "^0.12.0",
     "react-scripts": "0.9.5"
   },
   "dependencies": {
+    "bootstrap": "^3.3.7",
     "react": "^15.5.4",
+    "react-bootstrap": "^0.31.0",
+    "react-document-meta": "^2.1.2",
     "react-dom": "^15.5.4"
   },
   "scripts": {
@@ -20,7 +24,9 @@
   "keywords": [
     "dbt",
     "dime game",
-    "interpersonal effectiveness"
+    "interpersonal effectiveness",
+    "when to say no",
+    "when to ask"
   ],
   "license": "ISC"
 }
