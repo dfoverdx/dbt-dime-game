@@ -2,6 +2,7 @@
   "name": "dime-game",
   "author": "Jordan Hitch",
   "version": "0.1.0",
+  "homepage": "https://dfdx.us/dbt-dime-game",
   "private": true,
   "description": "Simple web app for the DBT \"Dime Game\" used to determine how strongly you should push when making a request or giving a \"no\" answer in an interaction",
   "devDependencies": {
