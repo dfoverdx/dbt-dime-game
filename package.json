@@ -1,0 +1,26 @@
+{
+  "name": "dime-game",
+  "author": "Jordan Hitch",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Simple web app for the DBT \"Dime Game\" used to determine how strongly you should push when making a request or giving a \"no\" answer in an interaction",
+  "devDependencies": {
+    "react-scripts": "0.9.5"
+  },
+  "dependencies": {
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "keywords": [
+    "dbt",
+    "dime game",
+    "interpersonal effectiveness"
+  ],
+  "license": "ISC"
+}
