@@ -24,6 +24,7 @@ class App extends Component {
         this.handlePromptsDone = this.handlePromptsDone.bind(this);
         this.handlePromptAnswered = this.handlePromptAnswered.bind(this);
         this.handleRestart = this.handleRestart.bind(this);
+        this.handleToggleAnswer = this.handleToggleAnswer.bind(this);
     }
 
     handleDecisionTypeChoice(choice) {
@@ -58,6 +59,25 @@ class App extends Component {
         });
     }
 
+    handleToggleAnswer(index) {
+        let answers = this.state.answers.slice(),
+            answer = answers[index],
+            dimes = this.state.dimes;
+
+        if (answer === 'yes') {
+            answers[index] = 'no';
+            dimes--;
+        } else {
+            answers[index] ='yes';
+            dimes++;
+        }
+
+        this.setState({
+            answers: answers,
+            dimes: dimes,
+        });
+    }
+
     render() {
         let q = null,
             jumboTitle = this.state.decisionType === null ? 'Do I ask?  Do I say no?' :
@@ -86,7 +106,7 @@ class App extends Component {
 
             case 'showResults':
                 q = <Result dimes={this.state.dimes} decisionType={this.state.decisionType} answers={this.state.answers}
-                        onRestart={this.handleRestart} />
+                        onRestart={this.handleRestart} onToggleAnswer={this.handleToggleAnswer} />
                 break;
 
             default:
