@@ -66,10 +66,10 @@ class App extends Component {
 
         if (answer === 'yes') {
             answers[index] = 'no';
-            dimes--;
+            dimes += this.state.decisionType === 'ask' ? -1 : 1;
         } else {
             answers[index] ='yes';
-            dimes++;
+            dimes += this.state.decisionType === 'ask' ? 1 : -1;
         }
 
         this.setState({
