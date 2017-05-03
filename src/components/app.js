@@ -23,6 +23,7 @@ class App extends Component {
         this.handleDecisionTypeChoice = this.handleDecisionTypeChoice.bind(this);
         this.handlePromptsDone = this.handlePromptsDone.bind(this);
         this.handlePromptAnswered = this.handlePromptAnswered.bind(this);
+        this.handleRestart = this.handleRestart.bind(this);
     }
 
     handleDecisionTypeChoice(choice) {
@@ -45,6 +46,15 @@ class App extends Component {
         this.setState({
             answers: answers,
             dimes: this.state.dimes + (addDime ? 1 : 0),
+        });
+    }
+
+    handleRestart() {
+        this.setState({
+            dimes: 0,
+            answers: new Array(PromptCount).fill(null),
+            stage: 'pickDecisionType',
+            decisionType: null,
         });
     }
 
@@ -75,7 +85,8 @@ class App extends Component {
                 break;
 
             case 'showResults':
-                q = <Result dimes={this.state.dimes} decisionType={this.state.decisionType} answers={this.state.answers} />
+                q = <Result dimes={this.state.dimes} decisionType={this.state.decisionType} answers={this.state.answers}
+                        onRestart={this.handleRestart} />
                 break;
 
             default:

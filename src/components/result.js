@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { ListGroup, ListGroupItem } from 'react-bootstrap';
+import { Button, ListGroup, ListGroupItem } from 'react-bootstrap';
 
 import Results from '../classes/results';
 import Prompts from '../classes/prompts';
@@ -23,10 +23,12 @@ export default class Result extends React.Component {
 
         return (
             <div className='col-xs-12'>
-                <h1>
+                <h1 className='pull-left'>
                     <span className='text-muted'>Result: </span>
                     {results[this.props.dimes]}
                 </h1>
+                <Button onClick={this.props.onRestart} bsSize='large' className='pull-right' style={{marginTop: 16}}>Restart</Button>
+                <div className='clearfix' />
                 <div className='panel panel-primary' style={{marginTop: 40}}>
                     <div className='panel-heading'>You answered</div>
                     <ListGroup>
@@ -42,4 +44,5 @@ Result.propTypes = {
     dimes: PropTypes.number.isRequired,
     answers: PropTypes.array.isRequired,
     decisionType: PropTypes.string.isRequired,
+    onRestart: PropTypes.func.isRequired,
 };
