@@ -17,7 +17,6 @@ export default class Result extends React.Component {
                             onClick={() => this.props.onToggleAnswer(i) }>
                             <div className='col-xs-11 col-lg-10'>{prompts[i].question}</div>
                             <div className={'col-xs-1 coi-lg-2 text-' + (a === 'yes' ? 'success' : 'danger')}>{a}</div>
-                            <div className='clearfix' />
                         </ListGroupItem>
                     );
                 });
