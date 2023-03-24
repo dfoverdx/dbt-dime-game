@@ -1,13 +1,11 @@
+import '../styles/app.css';
 import React, { Component } from 'react';
+import { Grid, Jumbotron, Navbar } from 'react-bootstrap';
 import DocumentMeta from 'react-document-meta';
-import { Jumbotron, Grid, Navbar } from 'react-bootstrap';
-
+import { PromptCount } from '../classes/prompts';
 import DecisionTypeChooser from './decision-type-chooser';
 import Prompt from './prompt';
 import Result from './result';
-
-import { PromptCount } from '../classes/prompts';
-import '../styles/app.css';
 
 class App extends Component {
     constructor(props) {
@@ -153,7 +151,7 @@ class App extends Component {
                             <li>
                                 <a className='navbar-link' href="https://github.com/dfoverdx/dbt-dime-game">Source Code</a>
                             </li>
-                            <li><a href='/'>Jordan Hitch</a> © 2017</li>
+                            <li><a href='/'>Bethany Hitch</a> © 2023</li>
                         </ul>
                     </div>
                 </Navbar>
