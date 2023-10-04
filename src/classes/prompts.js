@@ -4,7 +4,7 @@ let prompts = {
         { name: 'Priorities', question: 'Is getting my objective more important than my relationship with this person?' },
         { name: 'Self-respect', question: 'Will asking help me feel competent and self-respecting?' },
         { name: 'Rights', question: 'Is the person required by law or moral code to do or give me what I want?' },
-        { name: 'Authority', question: 'Am I responsibile for telling the person what to do?' },
+        { name: 'Authority', question: 'Am I responsible for telling the person what to do?' },
         { name: 'Relationship', question: 'Is what I want appropriate for this relationship?  (Is it right to ask for what I want?)' },
         { name: 'Goals', question: 'Is asking important to a long-term goal?' },
         { name: 'Give and take', question: 'Do I give as much as I get with this person?' },
